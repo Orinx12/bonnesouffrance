@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LA BONNE SOUFFRANCE</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Lato', sans-serif;
@@ -21,12 +21,31 @@
             text-align: center;
             margin-bottom: 40px;
         }
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5em;
+        .brand {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5em;
+            color: white;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+            font-weight: 700;
+        }
+        .main-title {
+            font-family: 'Cinzel', serif;
+            font-size: 4em;
             margin: 0;
-            padding-bottom: 20px;
+            padding-bottom: 10px;
+            letter-spacing: 4px;
+            color: #ff0000;
+            font-weight: 900;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .subtitle {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8em;
+            color: white;
+            margin: 20px 0;
             letter-spacing: 2px;
+            font-weight: 700;
         }
         .summary {
             max-width: 800px;
@@ -117,8 +136,14 @@
             background-color: #128C7E;
         }
         @media (max-width: 768px) {
-            .hero h1 {
+            .brand {
+                font-size: 1.2em;
+            }
+            .main-title {
                 font-size: 2.5em;
+            }
+            .subtitle {
+                font-size: 1.4em;
             }
             .summary {
                 font-size: 0.9em;
@@ -133,7 +158,9 @@
 </head>
 <body>
     <div class="hero">
-        <h1>LA BONNE SOUFFRANCE</h1>
+        <div class="brand">OFLIX BENIN</div>
+        <h1 class="main-title">LA BONNE SOUFFRANCE</h1>
+        <div class="subtitle">LANCE LE LIVRE</div>
         <div class="summary">
             Dans une société où les inégalités économiques s'accentuent, il est essentiel d'explorer les différentes facettes de la souffrance humaine. 
             Ce livre, 'LA BONNE SOUFFRANCE', vise à jeter un éclairage sur les réalités souvent méconnues de ceux qui vivent dans la précarité, tout en 
@@ -145,7 +172,7 @@
 
     <div class="container">
         <div class="content">
-            <img src="/api/placeholder/400/320" alt="LA BONNE SOUFFRANCE" class="book-image">
+            <img src="SOUFFRANCE.jpg" alt="LA BONNE SOUFFRANCE" class="book-image">
             
             <div class="button-container">
                 <button onclick="showModal('commander')" class="button">Commander le livre</button>
