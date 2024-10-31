@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA BONNE SOUFFRANCE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        .hero {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            margin: 0;
+            padding-bottom: 20px;
+            letter-spacing: 2px;
+        }
+        .summary {
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 0.95em;
+            line-height: 1.8;
+            color: #e0e0e0;
+            padding: 0 20px;
+            text-align: justify;
+            font-weight: 300;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+        .book-image {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        .button {
+            padding: 16px 32px;
+            font-size: 16px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            background-color: #2c3e50;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .button:hover {
+            background-color: #34495e;
+            transform: translateY(-2px);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 1000;
+        }
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 40px;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 12px;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .modal-content h2 {
+            font-family: 'Playfair Display', serif;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .whatsapp-button {
+            background-color: #25D366;
+            margin-top: 30px;
+        }
+        .whatsapp-button:hover {
+            background-color: #128C7E;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            .summary {
+                font-size: 0.9em;
+                padding: 0 15px;
+            }
+            .modal-content {
+                margin: 20% auto;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>LA BONNE SOUFFRANCE</h1>
+        <div class="summary">
+            Dans une société où les inégalités économiques s'accentuent, il est essentiel d'explorer les différentes facettes de la souffrance humaine. 
+            Ce livre, 'LA BONNE SOUFFRANCE', vise à jeter un éclairage sur les réalités souvent méconnues de ceux qui vivent dans la précarité, tout en 
+            mettant en relief les souffrances des plus privilégiés. À travers cette analyse, je souhaite susciter une réflexion profonde sur la manière dont 
+            la richesse et la pauvreté façonnent nos expériences de vie. Ce livre n'est pas seulement une critique des injustices sociales, mais également 
+            un appel à la motivation et à la résilience pour ceux qui, malgré les obstacles, continuent de se battre pour leurs rêves.
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <img src="/api/placeholder/400/320" alt="LA BONNE SOUFFRANCE" class="book-image">
+            
+            <div class="button-container">
+                <button onclick="showModal('commander')" class="button">Commander le livre</button>
+                <button onclick="showModal('soutenir')" class="button">Je soutiens le projet</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Commander -->
+    <div id="modalCommander" class="modal">
+        <div class="modal-content">
+            <h2>Commander le livre</h2>
+            <p>J'accepte commander le livre et j'accepte les conditions de reception du livre.</p>
+            <p>J'accepte payer une somme de 1000F via MOBILE MONEY portant uniquement le nom Orinx Crédo Eurol ATECOSSI</p>
+            <p>Contactez directement l'auteur ici :</p>
+            <a href="https://wa.me/22999578258?text=Bonjour%2C%20j'aimerais%20commander%20le%20livre%20LA%20BONNE%20SOUFFRANCE%20veuillez%20me%20fournir%20les%20numeros%20mobile%20money.%20Merci" 
+               class="button whatsapp-button" 
+               target="_blank">
+                Contacter sur WhatsApp
+            </a>
+            <button onclick="hideModal('commander')" class="button">Fermer</button>
+        </div>
+    </div>
+
+    <!-- Modal Soutenir -->
+    <div id="modalSoutenir" class="modal">
+        <div class="modal-content">
+            <h2>Soutenir le projet</h2>
+            <p>Merci pour l'attention portée envers le livre LA Bonne souffrance.</p>
+            <p>Soutenez le projet en commandant le livre à une valeur supérieure à sa valeur initiale c'est-à-dire supérieur à 1000F</p>
+            <p>J'accepte payer une somme supérieure à 1000F via MOBILE MONEY portant uniquement le nom Orinx Crédo Eurol ATECOSSI</p>
+            <p>Contactez directement l'auteur ici :</p>
+            <a href="https://wa.me/22999578258?text=Bonjour%2C%20j'aimerais%20soutenir%20le%20livre%20LA%20BONNE%20SOUFFRANCE%20veuillez%20me%20fournir%20les%20numeros%20mobile%20money.%20Merci" 
+               class="button whatsapp-button" 
+               target="_blank">
+                Contacter sur WhatsApp
+            </a>
+            <button onclick="hideModal('soutenir')" class="button">Fermer</button>
+        </div>
+    </div>
+
+    <script>
+        function showModal(type) {
+            document.getElementById(`modal${type.charAt(0).toUpperCase() + type.slice(1)}`).style.display = "block";
+        }
+
+        function hideModal(type) {
+            document.getElementById(`modal${type.charAt(0).toUpperCase() + type.slice(1)}`).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
